@@ -10,9 +10,9 @@
  "field_order": [
   "club_name",
   "club_email",
+  "charter_date",
   "column_break_3",
   "zone",
-  "charter_date",
   "column_break_13",
   "website",
   "blog",
@@ -168,7 +168,7 @@
   }
  ],
  "image_field": "logo",
- "modified": "2020-12-27 23:27:34.935646",
+ "modified": "2020-12-28 01:14:25.103077",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Club",
