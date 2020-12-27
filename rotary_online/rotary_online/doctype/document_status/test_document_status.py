@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# Copyright (c) 2020, Neil Lasrado, Rotaract Charitable Trust and Contributors
+# See license.txt
+from __future__ import unicode_literals
+
+# import frappe
+import unittest
+
+class TestDocumentStatus(unittest.TestCase):
+	pass

@@ -1,0 +1,224 @@
+{
+ "allow_copy": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:club_name",
+ "creation": "2015-03-19 12:45:41.509852",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "club_name",
+  "club_email",
+  "column_break_3",
+  "zone",
+  "charter_date",
+  "column_break_13",
+  "website",
+  "blog",
+  "instagram_handle",
+  "column_break_8",
+  "facebook_page_address",
+  "twitter_handle",
+  "section_break_24",
+  "assistant_governor",
+  "assistant_trainer",
+  "district_secretary",
+  "chief_coordinator",
+  "column_break_18",
+  "assistant_governor_name",
+  "assistant_trainer_name",
+  "district_secretary_name",
+  "chief_coordinator_name",
+  "logo"
+ ],
+ "fields": [
+  {
+   "fieldname": "club_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Club Name",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "club_email",
+   "fieldtype": "Data",
+   "label": "Contact Email Address"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Zone",
+   "options": "Zone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "charter_date",
+   "fieldtype": "Date",
+   "label": "Charter Date"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "blog",
+   "fieldtype": "Data",
+   "label": "Blog"
+  },
+  {
+   "fieldname": "instagram_handle",
+   "fieldtype": "Data",
+   "label": "Instagram Handle"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "facebook_page_address",
+   "fieldtype": "Data",
+   "label": "Facebook Page Address"
+  },
+  {
+   "fieldname": "twitter_handle",
+   "fieldtype": "Data",
+   "label": "Twitter Handle"
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assistant_governor",
+   "fieldtype": "Link",
+   "label": "Assistant Governor",
+   "options": "User"
+  },
+  {
+   "fieldname": "assistant_trainer",
+   "fieldtype": "Link",
+   "label": "Assistant Trainer",
+   "options": "User"
+  },
+  {
+   "fieldname": "district_secretary",
+   "fieldtype": "Link",
+   "label": "District Secretary",
+   "options": "User"
+  },
+  {
+   "fieldname": "chief_coordinator",
+   "fieldtype": "Link",
+   "label": "Chief Coordinator ",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "assistant_governor.full_name",
+   "fieldname": "assistant_governor_name",
+   "fieldtype": "Data",
+   "label": "Assistant Governor Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assistant_trainer.full_name",
+   "fieldname": "assistant_trainer_name",
+   "fieldtype": "Data",
+   "label": "Assistant Trainer Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "district_secretary.full_name",
+   "fieldname": "district_secretary_name",
+   "fieldtype": "Data",
+   "label": "District Secretary Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "chief_coordinator.full_name",
+   "fieldname": "chief_coordinator_name",
+   "fieldtype": "Data",
+   "label": "Chief Coordinator Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "logo"
+  }
+ ],
+ "image_field": "logo",
+ "modified": "2020-12-27 23:27:34.935646",
+ "modified_by": "Administrator",
+ "module": "Rotary Online",
+ "name": "Club",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Full Access",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "District Official"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "share": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "club_name"
+}

@@ -1,0 +1,40 @@
+{
+ "creation": "2015-06-10 10:16:08.416818",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "member_id",
+  "column_break_2",
+  "member_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "member_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member ID",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-27 23:33:36.917116",
+ "modified_by": "Administrator",
+ "module": "Rotary Online",
+ "name": "Project Chairperson",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

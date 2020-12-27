@@ -1,0 +1,28 @@
+{
+ "creation": "2015-06-01 15:10:59.705879",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "club_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "club_name",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Club Name",
+   "options": "Club",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-27 23:33:25.879998",
+ "modified_by": "Administrator",
+ "module": "Rotary Online",
+ "name": "Joint Project Club",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,8 @@
+{
+	"js/chart.js": [
+		"node_modules/chart.js/dist/Chart.min.js"
+	],
+	"js/rotary_desk.js": [
+		"public/js/desk.js"
+	]
+}
