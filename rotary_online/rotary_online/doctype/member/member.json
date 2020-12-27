@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "member_name",
+  "membership_id",
   "dob",
   "column_break_4",
   "gender",
@@ -121,10 +122,15 @@
    "label": "Zone",
    "options": "Zone",
    "read_only": 1
+  },
+  {
+   "fieldname": "membership_id",
+   "fieldtype": "Int",
+   "label": "Membership ID"
   }
  ],
  "image_field": "image",
- "modified": "2020-12-28 01:03:26.275368",
+ "modified": "2020-12-28 01:23:19.408136",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Member",
