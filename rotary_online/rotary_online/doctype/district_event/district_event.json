@@ -1,0 +1,181 @@
+{
+ "autoname": "DE.######",
+ "creation": "2020-12-28 01:33:16.456185",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_event",
+  "participation_level",
+  "column_break_3",
+  "date",
+  "venue",
+  "section_break_4",
+  "summary",
+  "section_break_5",
+  "club",
+  "column_break_4",
+  "zone",
+  "section_break_6",
+  "document_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_event",
+   "fieldtype": "Data",
+   "label": "Name of Event",
+   "reqd": 1
+  },
+  {
+   "fieldname": "participation_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Participation Level",
+   "options": "Lead Host\nCo host",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Club",
+   "options": "Club",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Zone",
+   "options": "Zone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "document_status",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Document Status",
+   "options": "Document Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "District Event",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "District Event",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-12-28 01:36:50.802230",
+ "modified_by": "Administrator",
+ "module": "Rotary Online",
+ "name": "District Event",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "District Official",
+   "share": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Full Access",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "club",
+ "title_field": "name_of_event"
+}

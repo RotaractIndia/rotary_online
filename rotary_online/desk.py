@@ -34,6 +34,13 @@ def set_desktop_icons():
 				"type": 'doctype',
 				"name": 'Meeting',
 				"link": '#List/Meeting/List'
+			},
+			{
+				"label": _('District Event'),
+				"icon": "octicon octicon-briefcase",
+				"type": 'doctype',
+				"name": 'District Event',
+				"link": '#List/District Event/List'
 			}
 		],
 		"Tools": [
