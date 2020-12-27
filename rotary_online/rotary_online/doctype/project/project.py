@@ -3,8 +3,55 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
+from frappe.utils import cint, cstr, now, getdate, add_months, add_days
 from frappe.model.document import Document
 
 class Project(Document):
-	pass
+	def validate(self):
+		self.validate_date()
+		self.set_status()
+		self.calculate_totals()
+		self.set_zone()
+		self.document_status='draft'
+
+	def on_submit(self):
+		frappe.db.set_value('Project', self.name, 'document_status', 'submitted')
+
+	def on_cancel(self):
+		frappe.db.set_value('Project', self.name, 'document_status', 'cancelled')
+
+	def set_status(self):
+		self.time_stamp = now()
+		self.reporting_month = getdate(self.end_time).strftime("%B")
+		d = add_months(getdate(self.end_time), 1)
+		deadline = cstr(getdate(d).strftime("%Y")) + "-" + cstr(getdate(d).strftime("%m")) + "-10"
+		if getdate(self.time_stamp) > getdate(deadline):
+			self.project_status = "Late"
+		elif getdate(self.time_stamp) <= getdate(add_days(getdate(self.end_time), 10)):
+			self.project_status = "Early"
+		else:
+			self.project_status = "On Time"
+
+		if self.reporting_month in ["July", "August", "September"]:
+			self.quarter = "One"
+		elif self.reporting_month in ["October", "November", "December"]:
+			self.quarter = "Two"
+		elif self.reporting_month in ["January", "February", "March"]:
+			self.quarter = "Three"
+		elif self.reporting_month in ["April", "May", "June"]:
+			self.quarter = "Four"
+
+	def calculate_totals(self):
+		self.total = cint(self.rotarians) + cint(self.other_club) + cint(self.partners) \
+			+ cint(self.guest)
+
+	def set_zone(self):
+		self.zone = frappe.db.get_value("Club", self.club, "zone")
+
+	def validate_date(self):
+		if self.end_time > now():
+			frappe.throw("Did you fix the Flux Capacitor ? \n Project End Time is Greater than today.")
+
+		if self.start_time > self.end_time:
+			frappe.throw("Start Time cannot be greater than End Time.")
