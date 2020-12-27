@@ -1,6 +1,6 @@
 {
  "allow_import": 1,
- "autoname": "RTR.#####",
+ "autoname": "RTN.#####",
  "creation": "2015-03-17 17:58:07.920205",
  "doctype": "DocType",
  "document_type": "Setup",
@@ -124,7 +124,7 @@
   }
  ],
  "image_field": "image",
- "modified": "2020-12-27 23:30:59.563909",
+ "modified": "2020-12-28 01:03:26.275368",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Member",

@@ -21,12 +21,11 @@
   "avenue_2",
   "section_break_10",
   "start_time",
+  "project_level",
   "column_break_12",
   "end_time",
   "number_of_hours",
   "section_break_19",
-  "project_level",
-  "section_break_14",
   "aim",
   "section_break_16",
   "ground_work",
@@ -172,10 +171,6 @@
    "label": "Project Category",
    "options": "Visionary\nImpactful\nPowerful\nOther",
    "reqd": 1
-  },
-  {
-   "fieldname": "section_break_14",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "aim",
@@ -339,7 +334,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2020-12-27 23:39:48.614969",
+ "modified": "2020-12-28 01:01:30.548037",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Project",
