@@ -15,6 +15,7 @@
   "column_break_3",
   "zone",
   "number_of_monthly_club_meetings",
+  "contact_mobile_number",
   "column_break_13",
   "website",
   "blog",
@@ -177,10 +178,15 @@
    "fieldname": "club_id",
    "fieldtype": "Int",
    "label": "Club ID"
+  },
+  {
+   "fieldname": "contact_mobile_number",
+   "fieldtype": "Data",
+   "label": "Contact Mobile Number"
   }
  ],
  "image_field": "logo",
- "modified": "2020-12-28 01:29:58.854471",
+ "modified": "2020-12-29 00:10:45.325662",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Club",
