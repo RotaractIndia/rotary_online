@@ -3,4 +3,5 @@
 *.egg-info
 *.swp
 tags
+node_modules
 rotary_online/docs/current

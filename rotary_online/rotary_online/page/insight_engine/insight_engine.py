@@ -13,7 +13,7 @@ def get_dashboards(club=None):
 	project_stats = frappe.get_all("Project",
 		filters={"club": club, "docstatus": 1},
 		fields=["""count(name) as project_count, sum(incomes) as income, sum(expenditure) as expense,
-			sum(total) as footfall, sum(TIMEDIFF(end_time, start_time)) as total_time"""])
+			sum(total) as footfall, sum(number_of_hours) as total_time"""])
 
 	meeting_stats = frappe.get_all("Meeting",
 		filters={"club": club, "docstatus": 1},
@@ -25,9 +25,9 @@ def get_dashboards(club=None):
 		order_by="net_profit desc",
 		limit=5)
 
-	reporting_status = frappe.get_all("Project",
+	project_category = frappe.get_all("Project",
 		filters={"club": club, "docstatus": 1},
-		fields=["project_status as status", "count(name) as count"],
+		fields=["project_category as status", "count(name) as count"],
 		group_by="status")
 
 	projects_by_month = frappe.get_all("Project",
@@ -54,8 +54,8 @@ def get_dashboards(club=None):
 		projects = get_club_projects(club, month)
 		if projects:
 			for project in projects:
-				month_project_hours[project.avenue_1] +=cint(project.total_time) //3600
-				month_project_hours[project.avenue_2] +=cint(project.total_time) //3600
+				month_project_hours[project.avenue_1] +=cint(project.total_time) 
+				month_project_hours[project.avenue_2] +=cint(project.total_time)
 
 				month_project_count[project.avenue_1] +=1
 				month_project_count[project.avenue_2] +=1
@@ -70,11 +70,11 @@ def get_dashboards(club=None):
 		"net_profit": flt(project_stats[0].income) - flt(project_stats[0].expense),
 		"total_footfall": cint(project_stats[0].footfall),
 		"total_projects": project_stats[0].project_count,
-		"total_project_time": cint(project_stats[0].total_time) // 3600,
+		"total_project_time": cint(project_stats[0].total_time),
 		"total_meetings":  cint(meeting_stats[0].meeting_count),
 		"total_meeting_time": cint(meeting_stats[0].total_time) // 3600,
 		"top_projects": top_projects,
-		"reporting_status": reporting_status,
+		"project_category": project_category,
 		"projects_per_month": project_count,
 		"projects_time_per_month": project_hours,
 		"reporting_months": reporting_months
@@ -83,6 +83,6 @@ def get_dashboards(club=None):
 def get_club_projects(club, month):
 	projects = frappe.get_all("Project",
 		filters={"club": club, "reporting_month": month, "docstatus": 1},
-		fields=["avenue_1", "avenue_2", "CONVERT(TIMEDIFF(end_time, start_time), UNSIGNED) as total_time"])
+		fields=["avenue_1", "avenue_2", "number_of_hours as total_time"])
 	return projects
 

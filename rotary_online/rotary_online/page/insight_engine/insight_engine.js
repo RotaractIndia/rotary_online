@@ -90,13 +90,13 @@ InsightEngine = class InsightEngine {
 		const colors = ['#f98d00','#484cff','#8dd241','#0c8d00','#ff6a05','#21bda9', '#7bf2bf',
 			'#f0c789', '#704041', '#adf2f1', '#ef9798', '#f4b02f', '#009fff', '#197a64']
 
-		// Reporting Status Pie Chart
+		// Project Category Pie Chart
 		new Chart($(".category-product-info .donut-chart .graphics"), {
 			type: 'doughnut',
 			data: {
-				labels: this.dashboard_data.reporting_status.map(elem => elem.status),
+				labels: this.dashboard_data.project_category.map(elem => elem.status),
 				datasets: [{
-					data: this.dashboard_data.reporting_status.map(elem => elem.count),
+					data: this.dashboard_data.project_category.map(elem => elem.count),
 					backgroundColor: colors,
 					borderColor: colors
 				}]
