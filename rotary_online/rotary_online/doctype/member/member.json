@@ -46,9 +46,9 @@
   },
   {
    "fieldname": "gender",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Gender",
-   "options": "Male\nFemale\nOther"
+   "options": "Gender"
   },
   {
    "fieldname": "status",
@@ -130,7 +130,7 @@
   }
  ],
  "image_field": "image",
- "modified": "2020-12-28 01:23:19.408136",
+ "modified": "2020-12-29 00:11:55.816998",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Member",
