@@ -12,6 +12,14 @@ app_email = "neil@rotaract3142.org"
 app_license = "MIT"
 
 app_logo_url = "/assets/rotary_online/images/rotary-logo.png"
+brand_html = "Rotary Online"
+
+website_context = {
+	"favicon": "/assets/rotary_online/images/rotary-logo.png",
+	"splash_image": "/assets/rotary_online/images/rotary-logo.png",
+}
+
+welcome_email = "rotary_online.utils.welcome_email"
 
 override_whitelisted_methods = {
  	"frappe.desk.moduleview.get_desktop_settings": "rotary_online.desk.set_desktop_icons"
