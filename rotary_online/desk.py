@@ -3,6 +3,7 @@ from frappe import _
 
 @frappe.whitelist()
 def set_desktop_icons():
+	directory_file_link = frappe.db.get_single_value("Resource Settings", 'e_directory')
 	desktop = {
 		"Club Administration": [
 			{
@@ -49,7 +50,7 @@ def set_desktop_icons():
 				"icon": "octicon octicon-file-submodule",
 				"type": 'page',
 				"name": 'Directory',
-				"link": '#'
+				"link": directory_file_link
 			},
 			{
 				"label": _('Insight Engine'),
