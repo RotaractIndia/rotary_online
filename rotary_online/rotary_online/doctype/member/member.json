@@ -18,8 +18,9 @@
   "column_break_7",
   "email",
   "section_break_12",
-  "designation",
+  "club_designation",
   "column_break_14",
+  "district_designation",
   "section_break_10",
   "club",
   "column_break_16",
@@ -89,12 +90,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "designation",
-   "fieldtype": "Link",
-   "label": "Designation",
-   "options": "Designation"
-  },
-  {
    "fieldname": "column_break_14",
    "fieldtype": "Column Break"
   },
@@ -127,10 +122,23 @@
    "fieldname": "membership_id",
    "fieldtype": "Int",
    "label": "Membership ID"
+  },
+  {
+   "fieldname": "club_designation",
+   "fieldtype": "Table",
+   "label": "Club Designation",
+   "options": "Member Designation"
+  },
+  {
+   "fieldname": "district_designation",
+   "fieldtype": "Table",
+   "label": "District Designation",
+   "options": "Member Designation",
+   "permlevel": 1
   }
  ],
  "image_field": "image",
- "modified": "2020-12-29 00:11:55.816998",
+ "modified": "2020-12-29 01:00:33.315231",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Member",
@@ -160,7 +168,7 @@
   {
    "read": 1,
    "report": 1,
-   "role": "District Council Member"
+   "role": "District Official"
   },
   {
    "create": 1,
@@ -181,6 +189,48 @@
    "role": "Club Member - Limited Access",
    "share": 1,
    "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "District Official",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Full Access",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "share": 1
   }
  ],
  "search_fields": "member_name",
