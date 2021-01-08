@@ -38,10 +38,17 @@ def set_desktop_icons():
 			},
 			{
 				"label": _('District Event'),
-				"icon": "octicon octicon-briefcase",
+				"icon": "octicon octicon-globe",
 				"type": 'doctype',
 				"name": 'District Event',
 				"link": '#List/District Event/List'
+			},
+			{
+				"label": _('OCV'),
+				"icon": "octicon octicon-repo",
+				"type": 'doctype',
+				"name": 'OCV',
+				"link": '#List/OCV/List'
 			}
 		],
 		"Tools": [
