@@ -45,7 +45,7 @@ def set_desktop_icons():
 			},
 			{
 				"label": _('OCV'),
-				"icon": "octicon octicon-repo",
+				"icon": "octicon octicon-checklist",
 				"type": 'doctype',
 				"name": 'OCV',
 				"link": '#List/OCV/List'
@@ -58,6 +58,13 @@ def set_desktop_icons():
 				"type": 'page',
 				"name": 'Directory',
 				"link": directory_file_link
+			},
+			{
+				"label": _('GML'),
+				"icon": "octicon octicon-repo",
+				"type": 'doctype',
+				"name": 'GML',
+				"link": '#List/GML/Image'
 			},
 			{
 				"label": _('Insight Engine'),
