@@ -1,5 +1,5 @@
 {
- "autoname": "OCV-####",
+ "autoname": "OCV.####",
  "creation": "2021-01-08 21:39:44.658828",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,6 +10,7 @@
   "ocv_date",
   "section_break_4",
   "ocv_report",
+  "open_ocv_report",
   "amended_from"
  ],
  "fields": [
@@ -52,10 +53,15 @@
    "options": "OCV",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "open_ocv_report",
+   "fieldtype": "Button",
+   "label": "Open OCV Report"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-01-08 21:39:59.841056",
+ "modified": "2021-01-09 00:17:36.636985",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "OCV",

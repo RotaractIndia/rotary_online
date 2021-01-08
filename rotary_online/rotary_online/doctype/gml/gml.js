@@ -5,6 +5,5 @@ frappe.ui.form.on('GML', {
 	open_gml: function(frm) {
 		var win = window.open(frm.doc.gml_link, '_blank');
  		win.focus();
-	},
-
+	}
 });
