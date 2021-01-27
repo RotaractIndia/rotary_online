@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 
-class DistrictEvent(Document):
+class EventParticipation(Document):
 	def validate(self):
 		self.set_zone()
 

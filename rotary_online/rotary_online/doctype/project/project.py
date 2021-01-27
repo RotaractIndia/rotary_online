@@ -43,6 +43,7 @@ class Project(Document):
 			self.quarter = "Four"
 
 	def calculate_totals(self):
+		self.rotarians = len(self.project_attendance)
 		self.total = cint(self.rotarians) + cint(self.other_club) + cint(self.partners) \
 			+ cint(self.guest)
 

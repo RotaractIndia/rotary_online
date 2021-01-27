@@ -8,7 +8,7 @@
  "field_order": [
   "project_name",
   "column_break_2",
-  "venue",
+  "location",
   "section_break_2",
   "time_stamp",
   "reporting_month",
@@ -25,21 +25,22 @@
   "column_break_12",
   "end_time",
   "number_of_hours",
-  "section_break_19",
-  "aim",
-  "section_break_16",
-  "ground_work",
-  "section_break_17",
-  "summary",
-  "section_break_29",
-  "follow_up",
   "section_break_22",
   "incomes",
+  "funded_by",
   "column_break_24",
   "expenditure",
+  "no_of_beneficiaries",
   "chairperson",
   "chairpersons",
+  "project_contact_section",
+  "name1",
+  "contact_number",
+  "column_break_31",
+  "email_address",
   "attendance_section",
+  "project_attendance",
+  "section_break_28",
   "rotarians",
   "other_club",
   "column_break_32",
@@ -50,6 +51,12 @@
   "joint_project",
   "jt_project_clubs",
   "section_break_35",
+  "summary",
+  "related_links",
+  "vendor_information_section",
+  "was_rcc_used",
+  "vendor",
+  "section_break_40",
   "club",
   "column_break_4",
   "zone",
@@ -69,12 +76,6 @@
   {
    "fieldname": "column_break_2",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "venue",
-   "fieldtype": "Data",
-   "label": "Venue",
-   "reqd": 1
   },
   {
    "depends_on": "eval: doc.docstatus==1",
@@ -143,7 +144,7 @@
   {
    "fieldname": "start_time",
    "fieldtype": "Datetime",
-   "label": "Start Time",
+   "label": "Start Date & Time",
    "reqd": 1
   },
   {
@@ -153,7 +154,7 @@
   {
    "fieldname": "end_time",
    "fieldtype": "Datetime",
-   "label": "End TIme",
+   "label": "End Date & Time",
    "reqd": 1
   },
   {
@@ -162,43 +163,10 @@
    "label": "Number of Hours"
   },
   {
-   "fieldname": "section_break_19",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "aim",
-   "fieldtype": "Text Editor",
-   "label": "Aim / Concept",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_16",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "ground_work",
-   "fieldtype": "Text Editor",
-   "label": "Groundwork (Pre-project)",
-   "reqd": 1
-  },
-  {
-   "fieldname": "section_break_17",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "summary",
    "fieldtype": "Text Editor",
    "label": "Summary",
    "reqd": 1
-  },
-  {
-   "fieldname": "section_break_29",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "follow_up",
-   "fieldtype": "Text Editor",
-   "label": "Follow Up / Feedback"
   },
   {
    "fieldname": "section_break_22",
@@ -240,7 +208,8 @@
   {
    "fieldname": "rotarians",
    "fieldtype": "Int",
-   "label": "Rotarians"
+   "label": "Rotarians",
+   "read_only": 1
   },
   {
    "fieldname": "other_club",
@@ -331,10 +300,88 @@
    "label": "Project Category",
    "options": "Visionary\nImpactful\nPowerful\nOther",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_40",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project_attendance",
+   "fieldtype": "Table",
+   "label": "Project Attendance",
+   "options": "Project Attendance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_28",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "funded_by",
+   "fieldtype": "Select",
+   "label": "Funded by",
+   "options": "Club\nDistrict Grant\nDistrict Fund\nGlobal Grant\nSponsor\nCSR\nOther"
+  },
+  {
+   "fieldname": "related_links",
+   "fieldtype": "Small Text",
+   "label": "Related Links"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_beneficiaries",
+   "fieldtype": "Int",
+   "label": "No of Beneficiaries"
+  },
+  {
+   "fieldname": "project_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Project Contact"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number"
+  },
+  {
+   "fieldname": "column_break_31",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "vendor_information_section",
+   "fieldtype": "Section Break",
+   "label": "Vendor Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "was_rcc_used",
+   "fieldtype": "Check",
+   "label": "Was RCC Used"
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Table",
+   "label": "Vendor",
+   "options": "Project Vendor"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-12-29 00:49:38.177944",
+ "modified": "2021-01-27 22:09:32.790392",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Project",

@@ -24,11 +24,13 @@
   "facebook_page_address",
   "twitter_handle",
   "section_break_24",
+  "club_president",
   "assistant_governor",
   "assistant_trainer",
   "district_secretary",
   "chief_coordinator",
   "column_break_18",
+  "club_president_name",
   "assistant_governor_name",
   "assistant_trainer_name",
   "district_secretary_name",
@@ -172,7 +174,7 @@
   {
    "fieldname": "number_of_monthly_club_meetings",
    "fieldtype": "Int",
-   "label": "Number of Monthly Club Meetings"
+   "label": "Proposed Number of Monthly Club Meetings"
   },
   {
    "fieldname": "club_id",
@@ -183,10 +185,23 @@
    "fieldname": "contact_mobile_number",
    "fieldtype": "Data",
    "label": "Contact Mobile Number"
+  },
+  {
+   "fieldname": "club_president",
+   "fieldtype": "Link",
+   "label": "Club President",
+   "options": "Member"
+  },
+  {
+   "fetch_from": "club_president.member_name",
+   "fieldname": "club_president_name",
+   "fieldtype": "Data",
+   "label": "Club President Name",
+   "read_only": 1
   }
  ],
  "image_field": "logo",
- "modified": "2020-12-29 00:10:45.325662",
+ "modified": "2021-01-27 21:44:46.720078",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Club",

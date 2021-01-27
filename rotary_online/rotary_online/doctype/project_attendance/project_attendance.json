@@ -1,21 +1,20 @@
 {
- "creation": "2015-06-01 15:10:59.705879",
+ "creation": "2021-01-26 16:45:47.088101",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "club_name",
+  "member_id",
   "column_break_2",
-  "club_president_name"
+  "member_name"
  ],
  "fields": [
   {
-   "fieldname": "club_name",
+   "fieldname": "member_id",
    "fieldtype": "Link",
-   "ignore_user_permissions": 1,
    "in_list_view": 1,
-   "label": "Club Name",
-   "options": "Club",
+   "label": "Member ID",
+   "options": "Member",
    "reqd": 1
   },
   {
@@ -23,19 +22,19 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "club_name.club_president_name",
-   "fieldname": "club_president_name",
+   "fetch_from": "member_id.member_name",
+   "fieldname": "member_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Club President Name",
+   "label": "Member Name",
    "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2021-01-27 21:58:28.189151",
+ "modified": "2021-01-26 16:45:47.088101",
  "modified_by": "Administrator",
  "module": "Rotary Online",
- "name": "Joint Project Club",
+ "name": "Project Attendance",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

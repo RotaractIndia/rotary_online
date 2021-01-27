@@ -10,6 +10,7 @@
   "column_break_3",
   "venue",
   "end_time",
+  "speaker",
   "reporting_month",
   "attendance_section",
   "rotarians",
@@ -18,8 +19,6 @@
   "partners",
   "guest",
   "total",
-  "section_break_4",
-  "minutes",
   "section_break_5",
   "club",
   "column_break_4",
@@ -49,7 +48,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Type of meeting",
-   "options": "GBM\nBOD Meet\nJoint Meet\nClub Assembly\nOCV\nAny Other"
+   "options": "GBM\nBOD Meet\nJoint Meet\nClub Assembly\nOCV\nProject\nFellowship\nFireside\nAny Other"
   },
   {
    "fieldname": "column_break_3",
@@ -81,11 +80,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "minutes",
-   "fieldtype": "Text Editor",
-   "label": "Minutes"
-  },
-  {
    "fieldname": "attendance_section",
    "fieldtype": "Section Break",
    "label": "Attendance"
@@ -109,10 +103,6 @@
    "fieldtype": "Int",
    "label": "Total",
    "read_only": 1
-  },
-  {
-   "fieldname": "section_break_4",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "club",
@@ -167,10 +157,16 @@
    "fieldname": "partners",
    "fieldtype": "Int",
    "label": "Partners"
+  },
+  {
+   "fieldname": "speaker",
+   "fieldtype": "Select",
+   "label": "Speaker",
+   "options": "No Speaker\nRotarian\nNon-Rotarian"
   }
  ],
  "is_submittable": 1,
- "modified": "2020-12-28 00:08:59.398841",
+ "modified": "2021-01-27 00:21:09.889825",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Meeting",

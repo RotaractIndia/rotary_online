@@ -1,21 +1,20 @@
 {
- "creation": "2015-06-01 15:10:59.705879",
+ "creation": "2021-01-27 22:08:59.056787",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "club_name",
+  "vendor_name",
   "column_break_2",
-  "club_president_name"
+  "contact_number"
  ],
  "fields": [
   {
-   "fieldname": "club_name",
-   "fieldtype": "Link",
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
    "ignore_user_permissions": 1,
    "in_list_view": 1,
-   "label": "Club Name",
-   "options": "Club",
+   "label": "Vendor Name",
    "reqd": 1
   },
   {
@@ -23,19 +22,17 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "club_name.club_president_name",
-   "fieldname": "club_president_name",
+   "fieldname": "contact_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Club President Name",
-   "read_only": 1
+   "label": "Contact Number"
   }
  ],
  "istable": 1,
- "modified": "2021-01-27 21:58:28.189151",
+ "modified": "2021-01-27 22:08:59.056787",
  "modified_by": "Administrator",
  "module": "Rotary Online",
- "name": "Joint Project Club",
+ "name": "Project Vendor",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",

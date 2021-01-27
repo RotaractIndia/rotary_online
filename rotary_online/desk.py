@@ -19,9 +19,7 @@ def set_desktop_icons():
 				"type": 'doctype',
 				"name": 'Member',
 				"link": '#List/Member/List'
-			}
-		],
-		"Reporting": [
+			},
 			{
 				"label": _('Project'),
 				"icon": "octicon octicon-checklist",
@@ -37,11 +35,18 @@ def set_desktop_icons():
 				"link": '#List/Meeting/List'
 			},
 			{
-				"label": _('District Event'),
+				"label": _('Event Participation'),
 				"icon": "octicon octicon-globe",
 				"type": 'doctype',
-				"name": 'District Event',
-				"link": '#List/District Event/List'
+				"name": 'Event Participation',
+				"link": '#List/Event Participation/List'
+			},
+			{
+				"label": _('Foundation Contribution'),
+				"icon": "octicon octicon-globe",
+				"type": 'doctype',
+				"name": 'Foundation Contribution',
+				"link": '#List/Foundation Contribution/List'
 			},
 			{
 				"label": _('OCV'),
