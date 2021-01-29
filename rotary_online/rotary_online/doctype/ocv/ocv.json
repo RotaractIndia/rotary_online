@@ -7,9 +7,57 @@
  "field_order": [
   "club",
   "ocv_manual_link",
+  "ag_report",
+  "open_ags_report",
   "column_break_2",
   "ocv_date",
   "pre_ocv_date",
+  "section_break_8",
+  "membership_analysis",
+  "column_break_10",
+  "trf_analysis",
+  "checklist_section",
+  "financial_matters_of_the_club_and_the_trust",
+  "matters_of_club_administration",
+  "column_break_9",
+  "projects",
+  "trf_giving_and_programs",
+  "financial_matters_section",
+  "sar",
+  "audit_reports",
+  "fund_raisers_accounts",
+  "record_of_district_dues",
+  "rotary_magazine_dues",
+  "column_break_18",
+  "global_grant",
+  "trf",
+  "budgets_of_the_club_and_trust",
+  "it_returns",
+  "fcra",
+  "club_administration_section",
+  "workbook",
+  "on_line_goals_on_rotary_central",
+  "training",
+  "qualification_for_grants",
+  "cl",
+  "laws",
+  "clp",
+  "strategic_planning",
+  "att",
+  "column_break_34",
+  "membership_roster",
+  "min",
+  "minutes_of_general_body_meeting_for_club_elections",
+  "minutes_of_annual_club_meeting_for_budge",
+  "club_bulletin",
+  "partners_in_service",
+  "ri",
+  "web",
+  "other_important_documents_section",
+  "club_charter",
+  "mop",
+  "column_break_46",
+  "trf_crs",
   "amended_from"
  ],
  "fields": [
@@ -34,6 +82,229 @@
    "reqd": 1
   },
   {
+   "fieldname": "pre_ocv_date",
+   "fieldtype": "Date",
+   "label": "Pre OCV Date"
+  },
+  {
+   "fieldname": "ocv_manual_link",
+   "fieldtype": "Data",
+   "label": "OCV Manual Link"
+  },
+  {
+   "fieldname": "checklist_section",
+   "fieldtype": "Section Break",
+   "label": "Checklist"
+  },
+  {
+   "default": "0",
+   "fieldname": "financial_matters_of_the_club_and_the_trust",
+   "fieldtype": "Check",
+   "label": "Financial matters of the Club and the Trust"
+  },
+  {
+   "default": "0",
+   "fieldname": "matters_of_club_administration",
+   "fieldtype": "Check",
+   "label": "Matters of Club Administration\u2028"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "projects",
+   "fieldtype": "Check",
+   "label": "Projects"
+  },
+  {
+   "default": "0",
+   "fieldname": "trf_giving_and_programs",
+   "fieldtype": "Check",
+   "label": "TRF giving and programs\u2028"
+  },
+  {
+   "fieldname": "financial_matters_section",
+   "fieldtype": "Section Break",
+   "label": "Financial matters"
+  },
+  {
+   "default": "0",
+   "fieldname": "sar",
+   "fieldtype": "Check",
+   "label": "SAR (RI Dues)\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "audit_reports",
+   "fieldtype": "Check",
+   "label": "Previous year\u2019s Audited account of the Club and the Trust"
+  },
+  {
+   "default": "0",
+   "fieldname": "fund_raisers_accounts",
+   "fieldtype": "Check",
+   "label": "Fund Raisers Accounts\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "record_of_district_dues",
+   "fieldtype": "Check",
+   "label": "Record of District dues \u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "rotary_magazine_dues",
+   "fieldtype": "Check",
+   "label": "Rotary Magazine dues\u2028"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "global_grant",
+   "fieldtype": "Check",
+   "label": "District & Global Grants\u2019 Accounts & Report"
+  },
+  {
+   "default": "0",
+   "fieldname": "trf",
+   "fieldtype": "Check",
+   "label": "Record of TRF contributions by Club members\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "budgets_of_the_club_and_trust",
+   "fieldtype": "Check",
+   "label": "Budgets of the Club and Trust\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "it_returns",
+   "fieldtype": "Check",
+   "label": "IT Returns\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "fcra",
+   "fieldtype": "Check",
+   "label": "80 G certificate & FCRA Registration\u2028"
+  },
+  {
+   "fieldname": "club_administration_section",
+   "fieldtype": "Section Break",
+   "label": "Club Administration"
+  },
+  {
+   "default": "0",
+   "fieldname": "workbook",
+   "fieldtype": "Check",
+   "label": "President\u2019s workbook"
+  },
+  {
+   "default": "0",
+   "fieldname": "on_line_goals_on_rotary_central",
+   "fieldtype": "Check",
+   "label": "On line Goals on Rotary Central"
+  },
+  {
+   "default": "0",
+   "fieldname": "training",
+   "fieldtype": "Check",
+   "label": "Club\u2019s Training Programs\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "qualification_for_grants",
+   "fieldtype": "Check",
+   "label": "Qualification for Grants\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "cl",
+   "fieldtype": "Check",
+   "label": "Classification list \u2013 filled and unfilled"
+  },
+  {
+   "default": "0",
+   "fieldname": "laws",
+   "fieldtype": "Check",
+   "label": "Adopted Club Bylaws and Constitution\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "clp",
+   "fieldtype": "Check",
+   "label": "Adoption of CLP\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "strategic_planning",
+   "fieldtype": "Check",
+   "label": "Strategic Planning"
+  },
+  {
+   "default": "0",
+   "fieldname": "att",
+   "fieldtype": "Check",
+   "label": "Attendance Records/Reporting"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "membership_roster",
+   "fieldtype": "Check",
+   "label": "Membership Roster\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "min",
+   "fieldtype": "Check",
+   "label": "Minutes books of Club BOD meetings & Assemblies and Trust\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "minutes_of_general_body_meeting_for_club_elections",
+   "fieldtype": "Check",
+   "label": "Minutes of General body meeting for Club elections"
+  },
+  {
+   "default": "0",
+   "fieldname": "minutes_of_annual_club_meeting_for_budge",
+   "fieldtype": "Check",
+   "label": "Minutes of Annual Club meeting for Budge"
+  },
+  {
+   "default": "0",
+   "fieldname": "club_bulletin",
+   "fieldtype": "Check",
+   "label": "Club Bulletin"
+  },
+  {
+   "default": "0",
+   "fieldname": "partners_in_service",
+   "fieldtype": "Check",
+   "label": "Partners in Service"
+  },
+  {
+   "default": "0",
+   "fieldname": "ri",
+   "fieldtype": "Check",
+   "label": "RI Presidential & Governor Citation monitoring\u2028"
+  },
+  {
+   "default": "0",
+   "fieldname": "web",
+   "fieldtype": "Check",
+   "label": "Use of District and RI Web site for uploading Club details and activities"
+  },
+  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -43,18 +314,66 @@
    "read_only": 1
   },
   {
-   "fieldname": "pre_ocv_date",
-   "fieldtype": "Date",
-   "label": "Pre OCV Date"
+   "fieldname": "other_important_documents_section",
+   "fieldtype": "Section Break",
+   "label": "Other important documents"
   },
   {
-   "fieldname": "ocv_manual_link",
-   "fieldtype": "Data",
-   "label": "OCV Manual Link"
+   "default": "0",
+   "fieldname": "club_charter",
+   "fieldtype": "Check",
+   "label": "Club Charter"
+  },
+  {
+   "default": "0",
+   "fieldname": "mop",
+   "fieldtype": "Check",
+   "label": "MOP"
+  },
+  {
+   "default": "0",
+   "fieldname": "trf_crs",
+   "fieldtype": "Check",
+   "label": "TRF Contribution List\u00a0and CRS Report\u00a0"
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ag_report",
+   "fieldtype": "Attach",
+   "label": "AG's Report",
+   "permlevel": 5
+  },
+  {
+   "depends_on": "ag_report",
+   "fieldname": "open_ags_report",
+   "fieldtype": "Button",
+   "label": "Open AG's Report",
+   "permlevel": 5
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "membership_analysis",
+   "fieldtype": "Attach",
+   "label": "Membership Analysis"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trf_analysis",
+   "fieldtype": "Attach",
+   "label": "TRF Analysis "
   }
  ],
  "is_submittable": 1,
- "modified": "2021-01-27 22:14:41.458622",
+ "modified": "2021-01-29 20:01:06.220427",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "OCV",
@@ -83,11 +402,11 @@
    "report": 1,
    "role": "District Official",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -96,9 +415,32 @@
    "role": "Club Member - Full Access",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Assistant Governor",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 5,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Assistant Governor",
+   "share": 1,
+   "write": 1
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "club",

@@ -12,7 +12,7 @@ def get_dashboards(club=None):
 
 	project_stats = frappe.get_all("Project",
 		filters={"club": club, "docstatus": 1},
-		fields=["""count(name) as project_count, sum(incomes) as income, sum(expenditure) as expense,
+		fields=["""count(name) as project_count, sum(income) as income, sum(expenditure) as expense,
 			sum(total) as footfall, sum(number_of_hours) as total_time"""])
 
 	meeting_stats = frappe.get_all("Meeting",
@@ -21,15 +21,34 @@ def get_dashboards(club=None):
 
 	top_projects = frappe.get_all("Project",
 		filters={"club": club, "docstatus": 1},
-		fields=["name","project_name", "avenue_1", "avenue_2", "(incomes - expenditure) as net_profit"],
+		fields=["name","project_name", "avenue_1", "avenue_2", "(income - expenditure) as net_profit"],
 		order_by="net_profit desc",
 		limit=5)
 
 	project_category = frappe.get_all("Project",
 		filters={"club": club, "docstatus": 1},
-		fields=["project_category as status", "count(name) as count"],
-		group_by="status")
-
+		fields=["project_category", "count(name) as count"],
+		group_by="project_category")
+	
+	type_of_meeting = frappe.get_all("Meeting",
+		filters={"club": club, "docstatus": 1},
+		fields=["type_of_meeting", "count(name) as count"],
+		group_by="type_of_meeting")
+	
+	project_funds = frappe.get_all("Project",
+		filters={"club": club, "docstatus": 1},
+		fields=["sum(club_fund) as 'Club Fund'", "sum(club_member) as 'Club Member'", 
+			"sum(district_grant) as 'District Grant'", "sum(district_fund) as 'District Fund'",
+			"sum(global_grant) as 'Global Grant'", "sum(sponsor) as 'Sponsor'", 
+			"sum(csr) as 'CSR'", "sum(other) as 'Other'"])
+			
+	source_of_funds = []
+	for source in project_funds[0]:
+		source_of_funds.append({
+			"source": source,
+			"amount": project_funds[0].get(source)
+		})
+	
 	projects_by_month = frappe.get_all("Project",
 		filters={"club": club, "docstatus": 1},
 		fields=["month(end_time) as month", "count(name) as count"],
@@ -77,7 +96,9 @@ def get_dashboards(club=None):
 		"project_category": project_category,
 		"projects_per_month": project_count,
 		"projects_time_per_month": project_hours,
-		"reporting_months": reporting_months
+		"reporting_months": reporting_months,
+		"source_of_funds": source_of_funds,
+		"type_of_meeting": type_of_meeting
 	}
 
 def get_club_projects(club, month):

@@ -9,8 +9,9 @@
   "mention_participation_level",
   "column_break_3",
   "date",
-  "venue",
+  "location",
   "section_break_4",
+  "project_attendance",
   "rotarians",
   "section_break_5",
   "club",
@@ -45,12 +46,6 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "venue",
-   "fieldtype": "Data",
-   "label": "Venue",
    "reqd": 1
   },
   {
@@ -123,11 +118,25 @@
   {
    "fieldname": "rotarians",
    "fieldtype": "Int",
-   "label": "Rotarians"
+   "label": "Rotarians",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project_attendance",
+   "fieldtype": "Table",
+   "label": "Project Attendance",
+   "options": "Project Attendance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "reqd": 1
   }
  ],
  "is_submittable": 1,
- "modified": "2021-01-27 00:14:46.173054",
+ "modified": "2021-01-29 01:14:31.585082",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Event Participation",

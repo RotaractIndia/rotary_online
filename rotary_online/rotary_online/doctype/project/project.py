@@ -10,10 +10,10 @@ from frappe.model.document import Document
 class Project(Document):
 	def validate(self):
 		self.validate_date()
-		self.set_status()
 		self.calculate_totals()
 		self.set_zone()
 		self.document_status='draft'
+		self.reporting_month = getdate(self.end_time).strftime("%B")
 
 	def on_submit(self):
 		frappe.db.set_value('Project', self.name, 'document_status', 'submitted')
@@ -21,31 +21,12 @@ class Project(Document):
 	def on_cancel(self):
 		frappe.db.set_value('Project', self.name, 'document_status', 'cancelled')
 
-	def set_status(self):
-		self.time_stamp = now()
-		self.reporting_month = getdate(self.end_time).strftime("%B")
-		d = add_months(getdate(self.end_time), 1)
-		deadline = cstr(getdate(d).strftime("%Y")) + "-" + cstr(getdate(d).strftime("%m")) + "-10"
-		if getdate(self.time_stamp) > getdate(deadline):
-			self.project_status = "Late"
-		elif getdate(self.time_stamp) <= getdate(add_days(getdate(self.end_time), 10)):
-			self.project_status = "Early"
-		else:
-			self.project_status = "On Time"
-
-		if self.reporting_month in ["July", "August", "September"]:
-			self.quarter = "One"
-		elif self.reporting_month in ["October", "November", "December"]:
-			self.quarter = "Two"
-		elif self.reporting_month in ["January", "February", "March"]:
-			self.quarter = "Three"
-		elif self.reporting_month in ["April", "May", "June"]:
-			self.quarter = "Four"
-
 	def calculate_totals(self):
 		self.rotarians = len(self.project_attendance)
 		self.total = cint(self.rotarians) + cint(self.other_club) + cint(self.partners) \
 			+ cint(self.guest)
+		self.income = self.club_fund + self.club_member + self.district_grant + self.district_fund + \
+			self.global_grant + self.sponsor + self.csr + self.other
 
 	def set_zone(self):
 		self.zone = frappe.db.get_value("Club", self.club, "zone")

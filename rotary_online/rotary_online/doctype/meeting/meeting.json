@@ -48,7 +48,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Type of meeting",
-   "options": "GBM\nBOD Meet\nJoint Meet\nClub Assembly\nOCV\nProject\nFellowship\nFireside\nAny Other"
+   "options": "GBM\nBOD Meet\nJoint Meet\nClub Assembly\nOCV\nFellowship\nFireside\nAny Other"
   },
   {
    "fieldname": "column_break_3",
@@ -166,7 +166,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-01-27 00:21:09.889825",
+ "modified": "2021-01-29 00:52:04.327968",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Meeting",

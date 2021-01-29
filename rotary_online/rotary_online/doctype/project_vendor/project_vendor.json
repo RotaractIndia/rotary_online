@@ -5,8 +5,11 @@
  "engine": "InnoDB",
  "field_order": [
   "vendor_name",
+  "email_address",
   "column_break_2",
-  "contact_number"
+  "contact_number",
+  "section_break_5",
+  "materials_purchased"
  ],
  "fields": [
   {
@@ -26,10 +29,25 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Contact Number"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "materials_purchased",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Materials Purchased"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
   }
  ],
  "istable": 1,
- "modified": "2021-01-27 22:08:59.056787",
+ "modified": "2021-01-29 00:56:04.492480",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Project Vendor",

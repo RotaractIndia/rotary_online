@@ -94,9 +94,53 @@ InsightEngine = class InsightEngine {
 		new Chart($(".category-product-info .donut-chart .graphics"), {
 			type: 'doughnut',
 			data: {
-				labels: this.dashboard_data.project_category.map(elem => elem.status),
+				labels: this.dashboard_data.project_category.map(elem => elem.project_category),
 				datasets: [{
 					data: this.dashboard_data.project_category.map(elem => elem.count),
+					backgroundColor: colors,
+					borderColor: colors
+				}]
+			},
+			options: {
+				cutoutPercentage: 70,
+				layout: { padding: 20 },
+				legend: { position: 'right'},
+				tooltips: {
+					intersect : false,
+					mode:'nearest'
+				}
+			}
+		});
+
+		// Source of Funds Pie Chart
+		new Chart($(".category-product-info .donut-chart1 .graphics"), {
+			type: 'doughnut',
+			data: {
+				labels: this.dashboard_data.source_of_funds.map(elem => elem.source),
+				datasets: [{
+					data: this.dashboard_data.source_of_funds.map(elem => elem.amount),
+					backgroundColor: colors,
+					borderColor: colors
+				}]
+			},
+			options: {
+				cutoutPercentage: 70,
+				layout: { padding: 20 },
+				legend: { position: 'right'},
+				tooltips: {
+					intersect : false,
+					mode:'nearest'
+				}
+			}
+		});
+
+		// Type of Meeting Pie Chart
+		new Chart($(".category-product-info .donut-chart2 .graphics"), {
+			type: 'doughnut',
+			data: {
+				labels: this.dashboard_data.type_of_meeting.map(elem => elem.type_of_meeting),
+				datasets: [{
+					data: this.dashboard_data.type_of_meeting.map(elem => elem.count),
 					backgroundColor: colors,
 					borderColor: colors
 				}]
