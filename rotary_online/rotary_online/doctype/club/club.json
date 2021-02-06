@@ -113,25 +113,29 @@
    "fieldname": "assistant_governor",
    "fieldtype": "Link",
    "label": "Assistant Governor",
-   "options": "User"
+   "options": "User",
+   "permlevel": 1
   },
   {
    "fieldname": "assistant_trainer",
    "fieldtype": "Link",
    "label": "Assistant Trainer",
-   "options": "User"
+   "options": "User",
+   "permlevel": 1
   },
   {
    "fieldname": "district_secretary",
    "fieldtype": "Link",
    "label": "District Secretary",
-   "options": "User"
+   "options": "User",
+   "permlevel": 1
   },
   {
    "fieldname": "chief_coordinator",
    "fieldtype": "Link",
    "label": "Chief Coordinator ",
-   "options": "User"
+   "options": "User",
+   "permlevel": 1
   },
   {
    "fieldname": "column_break_18",
@@ -201,7 +205,7 @@
   }
  ],
  "image_field": "logo",
- "modified": "2021-01-27 21:44:46.720078",
+ "modified": "2021-02-06 23:58:31.548731",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Club",
@@ -248,6 +252,37 @@
    "report": 1,
    "role": "Club Member - Limited Access",
    "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Full Access",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
   }
  ],
  "show_name_in_global_search": 1,
