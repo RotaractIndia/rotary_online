@@ -12,6 +12,7 @@
   "column_break_4",
   "gender",
   "status",
+  "introduced_by",
   "image",
   "section_break_5",
   "contact_number",
@@ -135,10 +136,15 @@
    "label": "District Designation",
    "options": "Member Designation",
    "permlevel": 1
+  },
+  {
+   "fieldname": "introduced_by",
+   "fieldtype": "Data",
+   "label": "Introduced By"
   }
  ],
  "image_field": "image",
- "modified": "2021-01-27 00:03:31.100279",
+ "modified": "2021-02-06 23:59:32.983385",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Member",
