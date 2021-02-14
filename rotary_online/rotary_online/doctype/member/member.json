@@ -55,6 +55,7 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Status",
    "options": "Regular\nHonorary\nEx Rotarian"
   },
@@ -72,6 +73,7 @@
    "fieldname": "contact_number",
    "fieldtype": "Data",
    "in_global_search": 1,
+   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Contact Number"
   },
@@ -122,6 +124,7 @@
   {
    "fieldname": "membership_id",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Membership ID"
   },
   {
@@ -144,7 +147,7 @@
   }
  ],
  "image_field": "image",
- "modified": "2021-02-06 23:59:32.983385",
+ "modified": "2021-02-14 18:06:41.570302",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Member",
