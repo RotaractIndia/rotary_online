@@ -40,7 +40,7 @@ def get_dashboards(club=None):
 		fields=["sum(club_fund) as 'Club Fund'", "sum(club_member) as 'Club Member'", 
 			"sum(district_grant) as 'District Grant'", "sum(district_fund) as 'District Fund'",
 			"sum(global_grant) as 'Global Grant'", "sum(sponsor) as 'Sponsor'", 
-			"sum(csr) as 'CSR'", "sum(other) as 'Other'"])
+			"sum(csr) as 'CSR'", "sum(trust_fund) as 'Trust Fund'", "sum(other) as 'Other'"])
 			
 	source_of_funds = []
 	for source in project_funds[0]:

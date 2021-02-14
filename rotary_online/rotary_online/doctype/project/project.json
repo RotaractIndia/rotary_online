@@ -22,6 +22,7 @@
   "funded_by_section",
   "club_fund",
   "club_member",
+  "trust_fund",
   "district_grant",
   "district_fund",
   "column_break_31",
@@ -395,10 +396,16 @@
    "label": "Reporting Month",
    "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "trust_fund",
+   "fieldtype": "Currency",
+   "label": "Trust Fund"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-01-29 12:54:06.311255",
+ "modified": "2021-02-14 18:46:52.391267",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Project",

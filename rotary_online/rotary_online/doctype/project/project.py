@@ -26,7 +26,7 @@ class Project(Document):
 		self.total = cint(self.rotarians) + cint(self.other_club) + cint(self.partners) \
 			+ cint(self.guest)
 		self.income = self.club_fund + self.club_member + self.district_grant + self.district_fund + \
-			self.global_grant + self.sponsor + self.csr + self.other
+			self.global_grant + self.sponsor + self.csr + self.other + self.trust_fund
 
 	def set_zone(self):
 		self.zone = frappe.db.get_value("Club", self.club, "zone")
