@@ -28,13 +28,11 @@
   "assistant_governor",
   "assistant_trainer",
   "district_secretary",
-  "chief_coordinator",
   "column_break_18",
   "club_president_name",
   "assistant_governor_name",
   "assistant_trainer_name",
   "district_secretary_name",
-  "chief_coordinator_name",
   "logo"
  ],
  "fields": [
@@ -131,13 +129,6 @@
    "permlevel": 1
   },
   {
-   "fieldname": "chief_coordinator",
-   "fieldtype": "Link",
-   "label": "Chief Coordinator ",
-   "options": "User",
-   "permlevel": 1
-  },
-  {
    "fieldname": "column_break_18",
    "fieldtype": "Column Break"
   },
@@ -160,13 +151,6 @@
    "fieldname": "district_secretary_name",
    "fieldtype": "Data",
    "label": "District Secretary Name",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "chief_coordinator.full_name",
-   "fieldname": "chief_coordinator_name",
-   "fieldtype": "Data",
-   "label": "Chief Coordinator Name",
    "read_only": 1
   },
   {
@@ -205,7 +189,7 @@
   }
  ],
  "image_field": "logo",
- "modified": "2021-02-06 23:58:31.548731",
+ "modified": "2021-03-20 17:41:00.725549",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Club",

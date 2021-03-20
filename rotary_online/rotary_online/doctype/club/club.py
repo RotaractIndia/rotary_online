@@ -15,8 +15,6 @@ class Club(Document):
 			set_user_permission(self.assistant_trainer, self.name)
 		if self.district_secretary:
 			set_user_permission(self.district_secretary, self.name)
-		if self.chief_coordinator:
-			set_user_permission(self.chief_coordinator, self.name)
 
 def set_user_permission(user, club):
 	existing_perm = frappe.get_all("User Permission", filters={'user':user, 'allow': 'Club', 'for_value': club})
