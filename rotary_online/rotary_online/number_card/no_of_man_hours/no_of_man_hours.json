@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "number_of_hours",
+ "creation": "2021-04-17 17:21:32.729658",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Project",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Project\",\"docstatus\",\"=\",\"1\",false]]",
+ "function": "Sum",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "No of Manhours",
+ "modified": "2021-04-17 17:22:01.707057",
+ "modified_by": "Administrator",
+ "module": "Rotary Online",
+ "name": "No of Man hours",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

@@ -1,0 +1,38 @@
+{
+ "cards": [
+  {
+   "card": "No of Meetings Reported"
+  },
+  {
+   "card": "No of Projects Reported"
+  },
+  {
+   "card": "No of Beneficiaries"
+  },
+  {
+   "card": "No of Man hours"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Member By Gender",
+   "width": "Half"
+  },
+  {
+   "chart": "Foundation Contribution",
+   "width": "Half"
+  }
+ ],
+ "creation": "2021-04-17 17:06:45.319593",
+ "dashboard_name": "Insight Engine",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2021-04-17 17:22:26.166571",
+ "modified_by": "Administrator",
+ "module": "Rotary Online",
+ "name": "Insight Engine",
+ "owner": "Administrator"
+}
