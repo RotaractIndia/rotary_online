@@ -47,10 +47,9 @@
   },
   {
    "fieldname": "amount_contributed",
-   "fieldtype": "Currency",
+   "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Amount Contributed (in USD)",
-   "options": "USD"
+   "label": "Amount Contributed (in USD)"
   },
   {
    "fieldname": "section_break_7",
@@ -89,7 +88,7 @@
   }
  ],
  "is_submittable": 1,
- "modified": "2021-02-14 19:22:18.761097",
+ "modified": "2021-05-08 12:06:06.862445",
  "modified_by": "Administrator",
  "module": "Rotary Online",
  "name": "Foundation Contribution",
