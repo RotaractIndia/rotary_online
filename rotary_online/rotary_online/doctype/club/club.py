@@ -10,6 +10,7 @@ from frappe.model.document import Document
 class Club(Document):
 	def validate(self):
 		if self.assistant_governor:
+			set_role_permission(self.assistant_governor)
 			set_user_permission(self.assistant_governor, self.name)
 		if self.assistant_trainer:
 			set_user_permission(self.assistant_trainer, self.name)
@@ -25,6 +26,16 @@ def set_user_permission(user, club):
 		permission.for_value = club
 		permission.save(ignore_permissions=True)
 	
+def set_role_permission(ag):
+	user=frappe.get_doc("User", ag)
+	user.update({
+		"roles": [
+			{"role": "Assistant Governor"},
+			{"role": "District Official"}		
+		]
+	})
+	user.save(ignore_permissions=True)
+
 def get_timeline_data(doctype, name):
 	project_data = dict(frappe.db.sql('''select unix_timestamp(date(end_time)), count(*)
 		from `tabProject` where club=%s
