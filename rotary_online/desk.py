@@ -54,6 +54,13 @@ def set_desktop_icons():
 				"type": 'doctype',
 				"name": 'OCV',
 				"link": '#List/OCV/List'
+			},
+			{
+				"label": _('E RMB'),
+				"icon": "octicon octicon-gift",
+				"type": 'doctype',
+				"name": 'E RMB',
+				"link": '#List/E RMB/List'
 			}
 		],
 		"Tools": [
@@ -63,6 +70,13 @@ def set_desktop_icons():
 				"type": 'page',
 				"name": 'Directory',
 				"link": directory_file_link
+			},
+			{
+				"label": _('Project Showcase'),
+				"icon": "octicon octicon-gift",
+				"type": 'query-report',
+				"name": 'Project Showcase',
+				"link": '#query-report/Project Showcase'
 			},
 			{
 				"label": _('GML'),
