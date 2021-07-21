@@ -5,12 +5,13 @@ from __future__ import unicode_literals
 import frappe
 
 def execute(filters=None):
-	columns = ["Club Name::150", "Members::80", "Projects::80", "Global Grant:Currency:150", "Total Expenses:Currency:150", "Foundation Contribution(USD):Currency:250"]
+	columns = ["Club Name::150", "Members::100", "Meetings::100", "Projects::100", "Global Grant:Currency:150", "Total Expenses:Currency:150", "Foundation Contribution(USD):Currency:250"]
 	data = []
 
 	for club in frappe.get_all("Club"):
 		row = [club.name]
 		row.append(get_member_count(club.name))
+		row.append(get_meeting_count(club.name))
 		project_stats = get_project_stat(club.name)
 		row.append(project_stats[0])
 		row.append(project_stats[1])
@@ -22,6 +23,10 @@ def execute(filters=None):
 def get_member_count(club):
 	members = frappe.db.sql("SELECT count(name) from `tabMember` where club = %s and status!='Ex Rotarian'",club)
 	return members[0][0]
+
+def get_meeting_count(club):
+	meets = frappe.db.sql("SELECT count(name) from `tabMeeting` where club = %s and docstatus=1",club)
+	return meets[0][0]
 
 def get_project_stat(club):
 	project = frappe.db.sql("SELECT count(name), sum(global_grant), sum(expenditure) from `tabProject` where club = %s and docstatus=1",club)
